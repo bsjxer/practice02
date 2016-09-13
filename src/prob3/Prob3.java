@@ -9,9 +9,18 @@ public class Prob3 {
 		System.out.print( "문자열을 입력하세요:" );
 		
 		String s = scanner.nextLine();
-		
-		/*  나머지 코드를 구현합니다. */
+		char[] a = s.toCharArray();
 
+		for( int i = 0 ; i < a.length; i++ ) {
+			if( 'a' <= a[i] && a[i] <= 'z' ) {
+				a[i] -= 32;
+			}
+			
+			for( int j = 0; j <= i; j++ ) {
+				System.out.print(a[j]);
+			}
+			System.out.println();
+		}
 		
 		scanner.close();
 	}
