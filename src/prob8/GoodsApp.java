@@ -7,6 +7,22 @@ public class GoodsApp {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner( System.in );
 
+		GoodsAll goods = new GoodsAll();
+		
+		System.out.println("상품명 수량 개수를 입력하시오.");
+		
+		String line = scanner.nextLine();
+		String[] infos = line.split( " " );
+		
+		String name = infos[0];
+		int price = Integer.parseInt( infos[1] );
+		int countStock = Integer.parseInt( infos[2] );
+		
+		goods.GoodsAll(name, price, countStock );
+		
+		goods.showGoods();
+		
+		scanner.close();
 		
 		
 		
